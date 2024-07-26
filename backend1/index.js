@@ -10,7 +10,6 @@ dotenv.config();
 const app = express();
 app.use(cors({
   origin:["https://fullstack-mern-front.vercel.app"],
-  methods : ["GET","PUSH"],
   credentials: true
 }
 ));
@@ -33,7 +32,7 @@ const Account = mongoose.model('account', accountSchema);
 app.get('/account', async (req, res) => {
   try {
     const accounts = await Account.find();
-    res.json(accounts);
+    res.send(11);
   } catch (err) {
     res.status(500).send(err);
   }
