@@ -8,7 +8,11 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-app.use(cors(
+app.use(cors({
+  origin:["https://fullstack-mern-ap1.vercel.app"],
+  methods : ["POST","GET"],
+  credentials: true
+}
 ));
 app.use(bodyParser.json());
 
