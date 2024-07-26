@@ -8,7 +8,7 @@ function ViewRecords() {
   const [selectedAccount, setSelectedAccount] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/account')
+    axios.get('https://fullstack-mern-ap1.vercel.app/account')
       .then(response => {
         setAccounts(response.data);
       })
