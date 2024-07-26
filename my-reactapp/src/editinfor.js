@@ -49,8 +49,10 @@ function EditRecord() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log('Submitting form with data:', formData);
     axios.put(`https://fullstack-mern-api.vercel.app/account/${selectedAccountId}`, formData)
       .then(response => {
+        console.log('Successfully updated account:', response.data);
         navigate('/'); // Navigate back to the home page
       })
       .catch(error => {
@@ -93,8 +95,7 @@ function EditRecord() {
           <input className='input'
             type="text"
             name="Notes"
-            value={formData.N
-otes}
+            value={formData.Notes}
             onChange={handleChange}
           />
         </div>
