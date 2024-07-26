@@ -17,7 +17,7 @@ function EditRecord() {
   axios.defaults.withCredentials=true;
 
   useEffect(() => {
-    axios.get('https://fullstack-mern-ap1.vercel.app/account')
+    axios.get('https://fullstack-mern-api.vercel.app/account')
       .then(response => {
         setAccounts(response.data);
         const account = response.data.find(acc => acc._id === selectedAccountId);
