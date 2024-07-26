@@ -1,4 +1,3 @@
-// index.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -9,16 +8,16 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin:["https://fullstack-mern-front.vercel.app"],
-  methods: ["GET", "POST"],
+  origin: ["https://fullstack-mern-front.vercel.app"],
+  methods: ["GET", "POST", "PUT"],
   credentials: true
-}
-));
+}));
+
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://Denis:decimal@cluster0.yzgehjl.mongodb.net/password?retryWrites=true&w=majority&appName=Cluster0')
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 const accountSchema = new mongoose.Schema({
   Description: String,
@@ -28,14 +27,14 @@ const accountSchema = new mongoose.Schema({
   Notes: String,
 });
 
-const Account = mongoose.model('account', accountSchema);
+const Account = mongoose.model('Account', accountSchema);
 
 app.get('/account', async (req, res) => {
   try {
     const accounts = await Account.find();
-    res.send(11);
+    res.json(accounts);
   } catch (err) {
-    res.status(500).send(err);
+    res.status(500).json({ error: 'An error occurred while fetching accounts' });
   }
 });
 
@@ -46,7 +45,7 @@ app.put('/account/:id', async (req, res) => {
     const account = await Account.findByIdAndUpdate(id, update, { new: true });
     res.json(account);
   } catch (err) {
-    res.status(500).send(err);
+    res.status(500).json({ error: 'An error occurred while updating the account' });
   }
 });
 
