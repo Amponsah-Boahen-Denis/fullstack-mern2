@@ -14,6 +14,7 @@ function EditRecord() {
     Notes: '',
     URL: ''
   });
+  axios.defaults.withCredentials=true;
 
   useEffect(() => {
     axios.get('https://fullstack-mern-ap1.vercel.app/account')
