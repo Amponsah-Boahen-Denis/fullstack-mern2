@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin:["https://fullstack-mern-ap1.vercel.app"],
+  origin:["https://fullstack-mern-front.vercel.app"],
   methods : ["POST","GET"],
   credentials: true
 }
