@@ -14,7 +14,7 @@ function EditRecord() {
     Notes: '',
     URL: ''
   });
-  axios.defaults.withCredentials=true;
+  axios.defaults.withCredentials = true;
 
   useEffect(() => {
     axios.get('https://fullstack-mern-api.vercel.app/account')
@@ -49,7 +49,7 @@ function EditRecord() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.put(`http://localhost:5000/account/${selectedAccountId}`, formData)
+    axios.put(`https://fullstack-mern-api.vercel.app/account/${selectedAccountId}`, formData)
       .then(response => {
         navigate('/'); // Navigate back to the home page
       })
@@ -93,7 +93,8 @@ function EditRecord() {
           <input className='input'
             type="text"
             name="Notes"
-            value={formData.Notes}
+            value={formData.N
+otes}
             onChange={handleChange}
           />
         </div>
