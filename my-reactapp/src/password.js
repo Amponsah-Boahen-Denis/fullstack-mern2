@@ -6,6 +6,7 @@ import './password.css';
 function ViewRecords() {
   const [accounts, setAccounts] = useState([]);
   const [selectedAccount, setSelectedAccount] = useState(null);
+  axios.defaults.withCredentials=true;
 
   useEffect(() => {
     axios.get('https://fullstack-mern-ap1.vercel.app/account')
