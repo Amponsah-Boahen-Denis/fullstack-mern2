@@ -12,7 +12,6 @@
 //     methods: ["GET", "POST", "PUT"],
 //   credentials: true
 // }));
-
 // app.use(bodyParser.json());
 
 // mongoose.connect('mongodb+srv://Denis:decimal@cluster0.yzgehjl.mongodb.net/password?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
