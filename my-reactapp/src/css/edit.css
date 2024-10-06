@@ -22,7 +22,7 @@ body {
 .h2 {
   color: #2b8a3e; /* Dark green */
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 2rem;
 }
 
@@ -68,6 +68,7 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   margin-top: 10px;
+  margin-bottom:20px;
   font-weight: bold;
   width: 100%; /* Set width to 100% for proper centering */
   max-width: 350px; /* Set a max-width for larger button */
@@ -86,4 +87,7 @@ body {
   .h2 {
     font-size: 1.5rem;
   }
+}
+p{
+  width: 85%;
 }
