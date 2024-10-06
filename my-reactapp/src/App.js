@@ -2,7 +2,6 @@
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import ViewRecords from './password';
 // import EditRecord from './editinfor';
-
 // function App() {
 //   return (
 //     <Router>
