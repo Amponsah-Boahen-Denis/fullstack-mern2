@@ -2,7 +2,6 @@
 // import axios from 'axios';
 // import { Link } from 'react-router-dom';
 // import './password.css';
-
 // function ViewRecords() {
 //   const [accounts, setAccounts] = useState([]);
 //   const [selectedAccount, setSelectedAccount] = useState(null);
