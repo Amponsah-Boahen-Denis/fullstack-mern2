@@ -1,64 +1,84 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9f5e9; /* Light green background */
+}
+
 .container {
-  background-color: #ffffff; /* White background color */
-  padding: 20px;
-  margin-top: 10px;
-  border-radius: 12px; /* Rounded corners */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Softer shadow for a 3D effect */
-  max-width: 400px; /* Adjusted width */
-  margin: 0 auto; /* Center container */
-  height: auto; /* Height adjusts based on content */
-}
-
-.label {
-  color: #4caf50; /* Green color for labels */
-  display: block;
-  margin-top: 10px;
-  font-size: 18px; /* Slightly larger font size */
-}
-
-.input, .sel, .butt {
-  width: 100%; /* Full width within container */
-  max-width: 600px; /* Limit width for better fit */
-  padding: 12px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: 1px solid #4caf50; /* Green border */
-  border-radius: 6px; /* Rounded corners */
-  font-size: 18px; /* Slightly larger font size */
-  background-color: #f1f1f1; /* Light gray background for input fields */
-  color: #333; /* Dark text color */
-}
-
-.input {
-  font-size: 18px; /* Slightly larger font size */
-}
-
-.sel {
-  font-size: 18px; /* Slightly larger font size */
-}
-
-.butt {
-  background-color: #4caf50; /* Green background */
-  color: #fff; /* White text */
-  border: none;
-  cursor: pointer;
-  font-size: 18px; /* Slightly larger font size */
-  margin-bottom: 10px;
-  width: 290px; /* Adjusted width */
-  border-radius: 6px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for 3D effect */
-}
-
-.butt:hover {
-  background-color: #388e3c; /* Darker green on hover */
+  justify-content: center;
+  padding: 20px;
+  background-color: #f1f8f1; /* Slightly darker green background */
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .h2 {
-  color: #4caf50; /* Green color for headings */
-  font-size: 36px; /* Larger font size */
-  margin-bottom: 15px; /* Spacing below heading */
+  color: #2b8a3e; /* Dark green */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+}
+
+.sel {
+  padding: 10px;
+  border: 2px solid #4caf50; /* Green border */
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+  color: #2b8a3e; /* Dark green */
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input {
+  padding: 10px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #45a049; /* Darker green on focus */
+}
+
+.butt {
+  background-color: #4caf50; /* Medium green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.butt:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+  }
 }
