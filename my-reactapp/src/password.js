@@ -31,7 +31,7 @@ function ViewRecords() {
           <div>
             <button className="button">Password Manager</button>
             <button className="button1">
-              <Link to={'/edit'} className='link'>View & Edit-list</Link>
+              <Link to={'/edit'} className='link'>Edit Password</Link>
             </button>
           </div>
           <div>
